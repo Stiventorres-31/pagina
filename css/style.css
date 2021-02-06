@@ -1,0 +1,169 @@
+﻿*{
+    font-family: Arial, Helvetica, sans-serif;
+}   
+.ul-menu{
+    margin-top: -0.7%;
+    padding: 0%;
+    list-style-type:none;/*quietar los puntos negros */
+    overflow: hidden;
+    background-color: coral;
+    font-weight: 800;
+}
+.li-menu{
+    margin: 0%;
+    padding: 0%;
+    float: left;
+    width: 20%;
+    text-align: center;
+    background-color: crimson;
+}
+.li-menu .a{
+    display: block;
+    margin: auto;
+    text-decoration: none;
+    color:#000;
+    padding: 10px;
+}
+.li-menu a:hover{
+    background-color: rgb(255, 231, 14);
+    color:black;
+}
+/*ENCABEZADO*/
+.encabezado{
+    width: 100%;
+    margin-top: -16px;
+}
+.quienes-somos{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+.videopresentacion{
+    text-align: center;
+}
+#videop{
+    padding: 10px;
+    width: 500px;
+}
+/*pies de pagina*/
+.pies-pagina{
+    width: 100%;
+    text-align: center;
+    background-color: crimson;
+    font-size: 18px;
+}
+.h2-pies, .p-pies{
+    padding: 0%;
+    margin: 0%;
+}
+/*PAGINA 2*/
+.encabezadop2h{
+    width: 100%;
+    height: 500px;
+    margin-top: -16px;
+
+}
+.Info-Herramientas{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+
+}
+.ul-pagina2{
+    text-align: justify;
+    margin-left: 100px;
+}
+    
+/*PÁGINA 3*/
+table,.img-tabla{
+    width: 350px;
+    height: 200px;
+    text-align: center;
+}
+table{
+    width: 100%;
+}
+
+.form-calculo{
+    margin: 10px;
+    background-color: crimson;
+    padding: 20px;
+    width: 97%;
+    margin: 0 auto;
+}
+.input-calculo{
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2px;
+    width: 98%;
+    height: 20px;
+    
+}
+label{
+   margin: 0 auto;
+}
+.enviar{
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 5px;
+    width: 98.5%;
+    height: 30px;
+   
+}
+.h2{
+    text-align: center;
+}
+.ul-tabla{
+    text-align: justify;
+    margin-left: 20px;
+}
+.sercios-descr{
+    padding: 10px;
+}
+/*PAGINA 4*/
+.encabezadop4{
+    width: 100%;
+    height: 500px;
+
+}
+
+/*CONTACTOS*/
+.form-contacto{
+    width: 50%;
+    padding: 10px;
+}
+.input-contacto{
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2px;
+    width: 150%;
+    height: 20px;
+    margin-left: 70px;
+}
+.class-contacto{
+    width: 45%;
+    float: left;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(18, 14, 255);
+    text-align: center;
+}
+.boton-contacto{
+    border-radius: 5px;
+    margin: 2px;
+    padding: 10px;
+    width: 152%;
+    font-weight: 800;
+    margin-left: 70px;
+}
+.class-maps{
+    margin: 5px;
+}
+.mapa{
+    width:100%;
+    height:524px;
+    border:0;
+}
+
