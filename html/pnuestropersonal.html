@@ -6,21 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Nuestro personal</title>
+    <script src="../js/proceso.js"></script>
 </head>
 
-<body>
+<body onload="mostrar()">
     <nav>
         <ul class="ul-menu">
             <li class="li-menu"><a class="a" href="../index.htm">Inicio</a></li>
             <li class="li-menu"><a class="a" href="pherramientas.html">Herramientas</a></li>
-            <li class="li-menu"><a class="a" href="pcotizacion.htm">Cotización</a></li>
+            <li class="li-menu"><a class="a" href="pcotizacion.html">Cotización</a></li>
             <li class="li-menu"><a class="a" href="pnuestropersonal.html">El Personal</a></li>
-            <li class="li-menu"><a class="a" href="contactos.htm">Contáctanos</a></li>
+            <li class="li-menu"><a class="a" href="catalogo.html">Catalogo</a></li>
+            <li class="li-menu"><a class="a" href="chat.html">Chat en linea</a></li>
+            <li class="li-menu"><a class="a" href="factura.html">Factura</a></li>
+            <li class="li-menu"><a class="a" href="contactos.html">Contáctanos</a></li>
+            <li class="li-menu"><a class="a" href="login.html" id="iniciar_se">Iniciar sesión</a></li>
         </ul>
     </nav>
+    <h4 id="nombre"></h4>
     <header>
         <img src="../img/Encabezadop4.jpg" alt="Encabezado ferreteria" class="encabezadop2h">
     </header><!---Encabezado-->
+    <br><br>
     <table border="1">
         <tr>
             <td colspan="4">
@@ -32,24 +39,29 @@
                     <input type="submit" value="Consultar Inventario" class="enviar" class="input-calculo">
                     <h2 class="h2">Valor Promedio Del Producto</h2>
                 </form>
+                <img src="../img/formulario inventario.jpg" class="image_inv" alt="">
             </td>
         </tr>
     </table>
+    <br>
     <div>
         <ul>
-            <li><b>Paginas afiliada </b>
-                <ul>
-                    <li><a href="https://www.ferreteriasamir.com/">Ferreteria Samir</a></li>
-                    <li><a href="https://www.metropoliscenter.com.co/">Ferreteria Metro</a></li>
-                </ul>
-        </ul>
-        <ul>
-            <li><b>Pagina sobre informacion de nuestro producto </b></li>
             <ul>
-                <li class="ul-tabla"><a href="pherramientas.html">Articulos de ferreteria</a></li>
+                <li><b>Paginas afiliada </b>
+                    <ul>
+                        <li><a href="https://www.ferreteriasamir.com/">Ferreteria Samir</a></li>
+                        <li><a href="https://www.metropoliscenter.com.co/">Ferreteria Metro</a></li>
+                    </ul>
+            </ul>
+            <ul>
+                <li><b>Pagina sobre informacion de nuestro producto </b></li>
+                <ul>
+                    <li class="ul-tabla"><a href="pherramientas.html">Articulos de ferreteria</a></li>
+                </ul>
             </ul>
         </ul>
     </div>
+    <br>
 
     <table border="1">
         <tr>

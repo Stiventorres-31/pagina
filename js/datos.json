@@ -1,0 +1,24 @@
+[
+    {
+        "nombre":"Stiven",
+        "apellidos":"Torres",
+        "tipo_de_usuario":"Administrador",
+        "correo":"torresmendozastiven@gmail.com",
+        "usuario":"stiven3120",
+        "clave":"3120"
+    },{
+        "nombre":"Dustin",
+        "apellidos":"Gomez",
+        "tipo_de_usuario":"Administrador",
+        "correo":"dustingomez@gmail.com",
+        "usuario":"dustin24",
+        "clave":"2424"
+    },{
+        "nombre":"Pepito",
+        "apellidos":"perez",
+        "tipo_de_usuario":"Estandar",
+        "correo":"perezpepito@gmail.com",
+        "usuario":"perez11",
+        "clave":"perez11"
+    }
+]

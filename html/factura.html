@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Factura</title>
+    <script src="../js/proceso.js"></script>
+</head>
+
+<body onload="mostrar()">
+    <nav>
+        <ul class="ul-menu">
+            <li class="li-menu"><a class="a" href="../index.htm">Inicio</a></li>
+            <li class="li-menu"><a class="a" href="pherramientas.html">Herramientas</a></li>
+            <li class="li-menu"><a class="a" href="pcotizacion.html">Cotización</a></li>
+            <li class="li-menu"><a class="a" href="pnuestropersonal.html">El Personal</a></li>
+            <li class="li-menu"><a class="a" href="catalogo.html">Catalogo</a></li>
+            <li class="li-menu"><a class="a" href="chat.html">Chat en linea</a></li>
+            <li class="li-menu"><a class="a" href="factura.html">Factura</a></li>
+            <li class="li-menu"><a class="a" href="contactos.html">Contáctanos</a></li>
+            <li class="li-menu"><a class="a" href="login.html" id="iniciar_se">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+    <h4 id="nombre"></h4>
+    <h1 style="text-align: center;">FACTURA</h1>
+    <table border="1" class="factura">
+        <tr>
+            <td><b>Código</b></td>
+            <td><b>Descripción</b></td>
+            <td><b>Precio por unidad</b></td>
+            <td><b>Cantidad</b></td>
+            <td><b>Total</b></td>
+        </tr>
+        <tr>
+            <td>0001</td>
+            <td>Martillo 11 onzas</td>
+            <td>18.000</td>
+            <td>2</td>
+            <td>$36.000</td>
+        </tr>
+        <tr>
+            <td>0002</td>
+            <td>Taladro Percutor 3/8</td>
+            <td>20.000</td>
+            <td>1</td>
+            <td>$449.000</td>
+        </tr>
+        <tr>
+            <td colspan="X3"><b>Total a Pagar</b></td>
+            <td colspan="4">485.000</td>
+        </tr>
+    </table>
+</body>
+
+</html>
