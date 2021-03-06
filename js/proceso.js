@@ -55,14 +55,9 @@ function login() {
             })
     }
 }
-function mostrar() {
-    var mos=document.getElementById("nombre").value;
-    if(mos=="null" || mos==" " ||mos=="undefined"){
-        
-    }else{
-    }
-    var nom = localStorage.getItem("Nombres","")
-    var sesion2 = localStorage.getItem("Inicio","Cerrar sesión")
+function mostrar() {   
+    var nom = localStorage.getItem("Nombres")
+    var sesion2 = localStorage.getItem("Inicio")
     document.getElementById('nombre').innerHTML = "Bienvenido: " + nom;
     document.getElementById('iniciar_se').innerHTML =  sesion2;
 }
