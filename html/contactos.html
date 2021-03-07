@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Contacto</title>
-    <script src="../js/proceso.js"></script>
+    
 </head>
 
-<body onload="mostrar()">
+<body onload="cargarDatos()">
     <nav>
         <ul class="ul-menu">
             <li class="li-menu"><a class="a" href="../index.htm">Inicio</a></li>
@@ -20,7 +20,7 @@
             <li class="li-menu"><a class="a" href="chat.html">Chat en linea</a></li>
             <li class="li-menu"><a class="a" href="factura.html">Factura</a></li>
             <li class="li-menu"><a class="a" href="contactos.html">Contáctanos</a></li>
-            <li class="li-menu"><a class="a" href="login.html" id="iniciar_se">Iniciar sesión</a></li>
+            <li class="li-menu"><a class="a" href="login.html"onclick="cerrarSesion()" id="iniciar_se">Iniciar sesión</a></li>
         </ul>
     </nav>
     <h4 id="nombre"></h4>
@@ -32,25 +32,35 @@
           <article class="class-contacto">
               <h2>FORMULARIO DE CONTACTO</h2>
             <form class="form-contacto">
-                <input type="text" placeholder="Ingrese sus nombres" class="input-contacto">
-                <input type="text" placeholder="Ingrese sus apellidos" class="input-contacto">
-                <input type="number" placeholder="Ingrese el número de cédula de ciudadania" class="input-contacto">
-                <input type="text" placeholder="Ingrese su departamento" class="input-contacto">
-                <input type="text" placeholder="Ingrese la ciudad" class="input-contacto">
-                <input type="text" placeholder="Ingrese el municipio" class="input-contacto">
-                <input type="text" placeholder="Ingrese su dirección" class="input-contacto">
-                <input type="number" placeholder="Ingrese el código postal de municipio" class="input-contacto">
-                <input type="number" placeholder="Ingrese su número de télefono" class="input-contacto">
-                <input type="email" placeholder="Ingrese su correo eléctronico" class="input-contacto">
-                <input type="text" placeholder="Explícanos tu situación" class="input-contacto">
-                <input type="text" placeholder="¿Cómo nos encontraste?" class="input-contacto">
-                <input type="text" placeholder="¿Sugerencia para mejorar?" class="input-contacto">
-                <input type="button" value="Enviar" class="boton-contacto">
+                <input type="text" placeholder="Ingrese sus nombres" id="txtNombre" class="input-contacto">
+                <input type="text" placeholder="Ingrese sus apellidos" id="txtApellido" class="input-contacto">
+                <input type="number" placeholder="Ingrese el número de cédula"  id="txtCedula"class="input-contacto">
+                <input type="text" placeholder="Ingrese su departamento" id="txtDepartamento" class="input-contacto">
+                <input type="text" placeholder="Ingrese la ciudad" id="txtCiudad"class="input-contacto">
+                <input type="text" placeholder="Ingrese el municipio" id="txtMunicipio"class="input-contacto">
+                <input type="text" placeholder="Ingrese su dirección" id="txtDireccion"class="input-contacto">
+                <input type="text" placeholder="Ingrese el código postal de municipio" id="txtPostal" class="input-contacto">
+                <input type="number" placeholder="Ingrese su número de télefono" id="txtTelefono" class="input-contacto">
+                <input type="email" placeholder="Ingrese su correo eléctronico" id="txtCorreo" class="input-contacto">
+                <input type="text" placeholder="Explícanos tu situación" id="txtSituacion"class="input-contacto">
+                <input type="text" placeholder="¿Cómo nos encontraste?" id="txtEncontraste"class="input-contacto">
+                <input type="text" placeholder="¿Sugerencia para mejorar?" id="txtSugerencia"class="input-contacto">
+                <input type="button" value="Enviar" class="boton-contacto" id="enviarContacto" onclick="guardarContacto()">
             </form>
+            
           </article>
           <article>
-              <img src="../img/formulario-de-contacto.png" class="imagen_agradable" alt="">
-          </article>
+            <table border="1" class="tabla-con" id="tabla-Contacto">
+                <tr class="tr">
+                   
+                </tr>
+            </table>
+        </article>
+          <article>
+            <img src="../img/formulario-de-contacto.png" class="imagen_agradable" alt="">
+        </article>
+          
+          
           <br><br><br><br>
           <center><h1 >NUESTRA UBICACION</h1></center>
           <br>
@@ -66,9 +76,9 @@
             <p class="p-pies">Calle 10b#31232</p>
             <p class="p-pies">elguagua@itsa.edu.co</p>
         </div>
-    </footer>
-    <!---Piecera-->
-
+    </footer><!---Piecera-->
+    <script src="../js/registrar_contacto.js"></script>
+    <script src="../js/proceso.js"></script>
 </body>
 
 </html>

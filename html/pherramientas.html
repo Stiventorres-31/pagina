@@ -8,7 +8,7 @@
     <script src="../js/proceso.js"></script>
 </head>
 
-<body onload="mostrar()">
+<body onload="cargarDatos()">
     <nav>
         <ul class="ul-menu">
             <li class="li-menu"><a class="a" href="../index.htm">Inicio</a></li>
@@ -19,7 +19,7 @@
             <li class="li-menu"><a class="a" href="chat.html">Chat en linea</a></li>
             <li class="li-menu"><a class="a" href="factura.html">Factura</a></li>
             <li class="li-menu"><a class="a" href="contactos.html">Contáctanos</a></li>
-            <li class="li-menu"><a class="a" href="login.html" id="iniciar_se">Iniciar sesión</a></li>
+            <li class="li-menu"><a class="a" href="login.html"onclick="cerrarSesion()" id="iniciar_se">Iniciar sesión</a></li>
         </ul>
     </nav>
     <h4 id="nombre"></h4>

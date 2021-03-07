@@ -1,70 +1,179 @@
-var boton = document.getElementById("ingresar")
-boton.addEventListener("click", login);
 
-var boton = document.getElementsByName("se")
-boton.addEventListener("click", cerrar);
-
-var inicio = String
+var nombreApe = String
 var sesion = String
-var m =String
+var m = String
 var encontrado = null
-function login() {
+var Veccedula=[],Vecnombre=[],Vecapellido=[],Vecdepartamento=[],Vecciudad=[],Vecmunicipio=[],Vecdireccion=[],VeccodigoPostal=[],Vectelefono=[],Veccorreo=[],Vecsituacion=[],Vecencontraste=[],Vecsugerencia=[];
+function IniciarSesion() {
     let user = document.getElementById("usuario_l").value;
     let pass = document.getElementById("pass_l").value;
 
     if ((user.length == 0) & (pass.length == 0)) {
-        alert("Llenar ambos campos")
-    }
-    else if (user.length == 0) {
-        alert("Ingrese un usuario")
+        alert("Por favor llene todos los campos");
 
-    } else if (pass.length == 0) {
-
-        alert("Ingrese una contraseña")
     } else {
+        if ((user.length >= 4) & (pass.length >= 4)) {
+            if (user.length == 0) {
+                alert("Por favor ingrese un usuario");
+            } else if (pass.length == 0) {
+                alert("Por favor ingrese una contraseña")
 
-        fetch('../js/datos.json')
+            }else{
+                fetch('../js/datos.json')
 
-            .then(function (respuesta) {
-                return respuesta.json()
-            })
+                    .then(function (respuesta) {
+                        return respuesta.json()
+                    })
 
-            .then(function (data) {
-                data.forEach(function (datos) {
-                    if (datos.usuario == user) {
-                        if (datos.clave == pass) {
-                            alert("Bienvenido señor/a: " + datos.nombre + " " + datos.apellidos)
-                            inicio = (datos.nombre) + " " + (datos.apellidos)
-                            sesion="Cerrar sesión"
-                            localStorage.setItem("Nombres", inicio);
-                            localStorage.setItem("Inicio", sesion);
-                            encontrado = true
-                            window.location = '../index.htm'
-                        } else {
-                            alert("Contraseña incorrecta")
-                            encontrado = true
-                        }
-                    }
-                })
-                if (encontrado == null) {
-                    alert("Usuario incorrecto")
-                }
-            })
-            .catch(function (error) {
-                alert(error)
-            })
+                    .then(function (dato) {
+                        dato.forEach(function (datos) {
+                            if (datos.usuario == user) {
+                                if (datos.clave == pass) {
+                                    alert("Bienvenido señor/a: " + datos.nombre + " " + datos.apellidos)
+                                    nombreApe = (datos.nombre) + " " + (datos.apellidos)
+                                    sesion = "Cerrar sesión"
+                                    localStorage.setItem("nombre_Ape", nombreApe);
+                                    localStorage.setItem("Inicio", sesion);
+                                    encontrado = true
+                                    window.location = '../index.htm'
+                                } else {
+                                    alert("Contraseña incorrecta")
+                                    encontrado = false
+                                }
+                            }
+                        })
+                    })
+                    .catch(function (error) {
+                        alert(error)
+                    })
+            }
+        } else {
+            alert("Por favor ingrese nás de 4 caracteres")
+
+        }
     }
 }
-function mostrar() {   
-    var nom = localStorage.getItem("Nombres")
+function cargarDatos() {
+    
+    var nom = localStorage.getItem("nombre_Ape")
     var sesion2 = localStorage.getItem("Inicio")
     document.getElementById('nombre').innerHTML = "Bienvenido: " + nom;
-    document.getElementById('iniciar_se').innerHTML =  sesion2;
+    document.getElementById('iniciar_se').innerHTML = sesion2;
 }
 
-function cerrar() {
-    window.localStorage.clear();
+function cerrarSesion() {
+    
+    localStorage.removeItem("nombre_Ape")
     localStorage.setItem("Inicio", "Iniciar sesion");
 }
 
 
+function guardarContacto(){
+    
+    var nombre = document.getElementById("txtNombre").value;
+    var apellido = document.getElementById("txtApellido").value;
+    var cedula=document.getElementById("txtCedula").value;
+    var departamento = document.getElementById("txtDepartamento").value;
+    var ciudad = document.getElementById("txtCiudad").value;
+    var municipio = document.getElementById("txtMunicipio").value;
+    var direccion = document.getElementById("txtDireccion").value;
+    var codigoPostal = document.getElementById("txtPostal").value;
+    var telefono = document.getElementById("txtTelefono").value;
+    var correo = document.getElementById("txtCorreo").value;
+    var situacion = document.getElementById("txtSituacion").value;
+    var encontraste = document.getElementById("txtEncontraste").value;
+    var sugerencia = document.getElementById("txtSugerencia").value;
+
+    if(nombre.length<=0 || apellido.length<=0 || cedula<=0|| departamento.length<=0 ||ciudad.length<=0 || municipio<=0 || direccion.length<=0 ||
+         codigoPostal.length<=0 || telefono.length<=0 || correo.length<=0 ||situacion.length<=0 || encontraste.length<=0 || sugerencia.length<=0){
+             alert("Por favor llene todos los campos")
+    }else{
+        Vecnombre.push(nombre);
+        Vecapellido.push(apellido);
+        Veccedula.push(cedula)
+        Vecdepartamento.push(departamento);
+        Vecciudad.push(ciudad);
+        Vecmunicipio.push(municipio);
+        Vecdireccion.push(direccion);
+        VeccodigoPostal.push(codigoPostal);
+        Vectelefono.push(telefono);
+        Veccorreo.push(correo);
+        Vecsituacion.push(situacion);
+        Vecencontraste.push(encontraste);
+        Vecsugerencia.push(sugerencia)
+     
+        localStorage.setItem('Nombre',JSON.stringify(Vecnombre))
+        localStorage.setItem('Apellidos',JSON.stringify(Vecapellido))
+        localStorage.setItem('Cedulas',JSON.stringify(Veccedula))
+        localStorage.setItem('Departamentos',JSON.stringify(Vecdepartamento))
+        localStorage.setItem('Ciudades',JSON.stringify(Vecciudad))
+        localStorage.setItem('Municipio',JSON.stringify(Vecmunicipio))
+        localStorage.setItem('Direccion',JSON.stringify(Vecdireccion))
+        localStorage.setItem('CodigoP',JSON.stringify(VeccodigoPostal))
+        localStorage.setItem('Telefono',JSON.stringify(Vectelefono))
+        localStorage.setItem('Correos',JSON.stringify(Veccorreo))
+        localStorage.setItem('Situacion',JSON.stringify(Vecsituacion))
+        localStorage.setItem('Encontraste',JSON.stringify(Vecencontraste))
+        localStorage.setItem('Sugerencia',JSON.stringify(Vecsugerencia))
+        alert("Registrado exitosamente")
+        cargar_datos_con();
+        limpiar_con();
+        }
+}
+function cargar_datos_con(){ 
+    
+        aux=
+        `<tr>
+       <th>Nombres</th>
+       <th>Apellidos</th>
+       <th>Cedula</th>
+       <th>Departamento</th>
+       <th>Ciudad</th>
+       <th>Municipio</th>
+       <th>Direccion</th>
+       <th>Código postal</th>
+       <th>Telefono</th>
+       <th>Correo electronico</th>
+       <th>Situación</th>
+       <th>Encontraste</th>
+       <th>Sugerencia</th>
+       
+      
+       </tr>`
+    
+       for( var i = 0;i<Vecnombre.length;i++){
+        aux += `
+        <tr>
+        <th>${Vecnombre[i]}</th>
+            <th>${Vecapellido[i]}</th>
+            <th>${Veccedula[i]}</th>
+            <th>${Vecdepartamento[i]}</th>
+            <th>${Vecciudad[i]}</th>
+            <th>${Vecmunicipio[i]}</th>
+            <th>${Vecdireccion[i]}</th>
+            <th>${VeccodigoPostal[i]}</th>
+            <th>${Vectelefono[i]}</th>
+            <th>${Veccorreo[i]}</th>
+            <th>${Vecsituacion[i]}</th>
+            <th>${Vecencontraste[i]}</th>
+            <th>${Vecsugerencia[i]}</th>
+        </tr> `
+       document.getElementById('tabla-Contacto').innerHTML= aux
+}
+
+}
+function limpiar_con(){
+    document.getElementById("txtNombre").value="";
+    document.getElementById("txtApellido").value="";
+    document.getElementById("txtCedula").value="";
+    document.getElementById("txtDepartamento").value="";
+    document.getElementById("txtCiudad").value="";
+    document.getElementById("txtMunicipio").value="";
+    document.getElementById("txtDireccion").value="";
+    document.getElementById("txtPostal").value="";
+    document.getElementById("txtTelefono").value="";
+    document.getElementById("txtCorreo").value="";
+    document.getElementById("txtSituacion").value="";
+    document.getElementById("txtEncontraste").value="";
+    document.getElementById("txtSugerencia").value="";
+}

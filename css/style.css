@@ -81,7 +81,7 @@ body{
 }
     
 /*PÁGINA 3*/
-table,.img-tabla{
+.table,.img-tabla{
     width: 350px;
     height: 200px;
     text-align: center;
@@ -149,6 +149,14 @@ label{
 }
 
 /*CONTACTOS*/
+
+.tabla-con{
+    width: -50% !important;
+}
+.tr{
+    width: 25%;
+    height: 10px;
+}
 .form-contacto{
     width: 50%;
     padding: 10px;
@@ -159,11 +167,11 @@ label{
     padding: 2px;
     width: 150%;
     height: 20px;
-    margin-left: 70px;
+    margin-left: 50px;
 }
 .class-contacto{
-    width: 45%;
-    float: left;
+    width: 40%;
+    
     border-radius: 5px;
     padding: 10px;
     background-color: rgb(255, 231, 14);    
@@ -175,7 +183,7 @@ label{
     padding: 10px;
     width: 152%;
     font-weight: 800;
-    margin-left: 70px;
+    margin-left: 50px;
 }
 .class-maps{
     margin: 5px;
@@ -186,7 +194,7 @@ label{
     border:0;
 }
 .imagen_agradable{
-    width: 52%;
+    width: 45%;
     height: 550px;
     padding: 10px;
 }
