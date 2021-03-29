@@ -4,47 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+   
     <title>Nuestro personal</title>
     <script src="../js/proceso.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 
 <body onload="cargarDatos()">
-    <nav>
-        <ul class="ul-menu">
-            <li class="li-menu"><a class="a" href="../index.htm">Inicio</a></li>
-            <li class="li-menu"><a class="a" href="pherramientas.html">Herramientas</a></li>
-            <li class="li-menu"><a class="a" href="pcotizacion.html">Cotización</a></li>
-            <li class="li-menu"><a class="a" href="pnuestropersonal.html">El Personal</a></li>
-            <li class="li-menu"><a class="a" href="catalogo.html">Catalogo</a></li>
-            <li class="li-menu"><a class="a" href="chat.html">Chat en linea</a></li>
-            <li class="li-menu"><a class="a" href="factura.html">Factura</a></li>
-            <li class="li-menu"><a class="a" href="contactos.html">Contáctanos</a></li>
-            <li class="li-menu"><a class="a" href="login.html"onclick="cerrarSesion()" id="iniciar_se">Iniciar sesión</a></li>
-        </ul>
-    </nav>
-    <h4 id="nombre"></h4>
+    <nav class="navbar navbar-expand-lg bg-danger navbar-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light fw-bold" href="../index.htm">GUAGUA</a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item "><a class="nav-link text-light fw-bold" href="../index.htm">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="pherramientas.html">Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="pcotizacion.html">Cotización</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="pnuestropersonal.html">El Personal</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="catalogo.html">Catalogo</a></li>     
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="contactos.html">Contáctanos</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="login.html" onclick="cerrarSesion()" id="iniciar_se">Iniciar sesión</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold disabled navbar-text" href="#" id="nombre_usu"></a></li>
+                 </ul>
+             </div>
+        </div>
+     </nav>
     <header>
-        <img src="../img/Encabezadop4.jpg" alt="Encabezado ferreteria" class="encabezadop2h">
+        <img src="../img/Encabezadop4.jpg" alt="Encabezado ferreteria" class="img-fluid w-100 h-70">
     </header><!---Encabezado-->
-    <br><br>
-    <table border="1">
-        <tr>
-            <td colspan="4">
-                <form class="form-calculo">
-                    <h2 class="h2">FORMULARIO DEL PERSONAL</h2>
-                    <input type="number" placeholder="Ingrese el código del producto" class="input-calculo">
-                    <input type="text" placeholder="Nombre del producto" class="input-calculo">
-                    <input type="number" placeholder="Fecha actual" class="input-calculo">
-                    <input type="submit" value="Consultar Inventario" class="enviar" class="input-calculo">
-                    <h2 class="h2">Valor Promedio Del Producto</h2>
-                </form>
-                <img src="../img/formulario inventario.jpg" class="image_inv" alt="">
-            </td>
-        </tr>
-    </table>
     <br>
-    <div>
+    <div class="fw-bold">
         <ul>
             <ul>
                 <li><b>Paginas afiliada </b>
@@ -61,74 +52,60 @@
             </ul>
         </ul>
     </div>
+
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <form class="">
+                    <h2 class="">FORMULARIO DEL PERSONAL</h2>
+                    <input type="number" placeholder="Codigo del producto" class="form-control">
+                    <input type="text" placeholder="Nombre del producto" class="form-control">
+                    <input type="number" placeholder="Fecha actual" class="form-control ">
+                    <input type="button" value="Consultar inventario" class="fw-bold bg-success form-control w-40 btn">
+                    <h2 class="">Valor Promedio Del Producto:</h2>
+                </form>
+                
+            </div>
+            <div class="col-lg-4">
+                <img src="../img/formulario inventario.jpg" class="img-fluid d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block" alt="">
+            </div>
+        </div>
+    </div>
     <br>
-
-    <table border="1">
-        <tr>
-            <td rowspan="3" class="sercios-descr">
-                <h2>MISION</h2>
-
-            </td>
-            <td>
-                <li class="ul-tabla"><b>La compañia tiene como objetivo
-                        convertirse en su proveedor de eleccion, ofrecer productos y servicios.</b>
-                </li>
-
-            </td>
-
-        </tr>
-        <tr>
-            <td>
-                <li class="ul-tabla">
-                    <b>Contribuir con la felicidad de nuestros clientes.</b>
-
-                </li>
-            </td>
-
-        </tr>
-        <tr>
-            <td>
-                <li class="ul-tabla">
-                    <b>Excelencia en material y servicios de calidad para la construcción.</b>
-                </li>
-            </td>
-
-        </tr>
-        <tr>
-            <td rowspan="3" class="sercios-descr">
-                <h2>VISION<h2>
-
-            </td>
-            <td>
-                <li class="ul-tabla">
-                    <b>Ser reconocida como la ferreteria lider en el segmento comercial.</b>
-                </li>
-
-            </td>
-
-        </tr>
-        <tr>
-            <td>
-                <li class="ul-tabla">
-                    <b>Ser una referencia en el mercado del material.</b>
-                </li>
-            </td>
-
-        </tr>
-        <tr>
-            <td>
-                <li class="ul-tabla">
-                    <b>Trabajar para proporcionar a cada cliente acceso a herramientas de calidad.</b>
-                </li>
-            </td>
-
-        </tr>
-        <tr>
-    </table>
+    <br>
+    <div class="container">
+        <section>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="fw-bold">
+                        <h2>MISION</h2>
+                        <ol class="">
+                            <li class="">La compañia tiene como objetivo convertirse en su proveedor de eleccion, ofrecer productos y servicios.</li>
+                            <li class="">Contribuir con la felicidad de nuestros clientes.</li>
+                            <li class="">Excelencia en material y servicios de calidad para la construcción.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5">
+                    <h2>VISION</h2>
+                    <ol class="fw-bold">
+                        <li class="">Ser reconocida como la ferreteria lider en el segmento comercial.</li>
+                        <li class="">Ser una referencia en el mercado del material.</li>
+                        <li class="">Trabajar para proporcionar a cada cliente acceso a herramientas de calidad.</li>
+                    </ol>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+    
     <br>
     <br>
 
-    <div class="Info-Herramientas">
+    <div class="fw-bold container text-center">
         <h2>NUESTRO PERSONAL</h2>
         <p>
             El personal encargado de las diferentes ubicaciones esta altamente calificado para realizar lo que el
@@ -146,19 +123,18 @@
     <br>
     <br>
 
-
-    <footer class="pies-pagina">
-        <div>
-            <h2 class="h2-pies">Ferreteria El Guagua</h2>
-            <p class="p-pies">3016086845</p>
-            <p class="p-pies">Calle 10b#31232</p>
-            <p class="p-pies">elguagua@itsa.edu.co</p>
+    
+    <footer >
+        <div class="  text-center text-light  bg-danger mw-100 p-1"  >
+            <h2 class="fw-bold">Ferreteria El Guagua</h2>
+            <p class="fw-bold">3016086845</p>
+            <p class="fw-bold">Calle 10b#31232</p>
+            <p class="fw-bold">elguagua@itsa.edu.co</p>
         </div>
-    </footer>
-    <!---Piecera-->
+    </footer><!---Piecera-->
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 
 

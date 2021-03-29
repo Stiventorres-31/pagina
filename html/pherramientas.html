@@ -3,185 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
     <title>Página De Herramientas</title>
     <script src="../js/proceso.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 
 <body onload="cargarDatos()">
-    <nav>
-        <ul class="ul-menu">
-            <li class="li-menu"><a class="a" href="../index.htm">Inicio</a></li>
-            <li class="li-menu"><a class="a" href="pherramientas.html">Herramientas</a></li>
-            <li class="li-menu"><a class="a" href="pcotizacion.html">Cotización</a></li>
-            <li class="li-menu"><a class="a" href="pnuestropersonal.html">El Personal</a></li>
-            <li class="li-menu"><a class="a" href="catalogo.html">Catalogo</a></li>
-            <li class="li-menu"><a class="a" href="chat.html">Chat en linea</a></li>
-            <li class="li-menu"><a class="a" href="factura.html">Factura</a></li>
-            <li class="li-menu"><a class="a" href="contactos.html">Contáctanos</a></li>
-            <li class="li-menu"><a class="a" href="login.html"onclick="cerrarSesion()" id="iniciar_se">Iniciar sesión</a></li>
-        </ul>
-    </nav>
-    <h4 id="nombre"></h4>
+    <nav class="navbar navbar-expand-lg bg-danger navbar-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light fw-bold" href="../index.htm">GUAGUA</a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                 <ul class="navbar-nav mx-auto">
+                    <li class="nav-item "><a class="nav-link text-light fw-bold" href="../index.htm">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="pherramientas.html">Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="pcotizacion.html">Cotización</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="pnuestropersonal.html">El Personal</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="catalogo.html">Catalogo</a></li>     
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="contactos.html">Contáctanos</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="login.html" onclick="cerrarSesion()" id="iniciar_se">Iniciar sesión</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold disabled navbar-text" href="#" id="nombre_usu"></a></li>
+                 </ul>
+             </div>
+        </div>
+     </nav>
 
     <header>
-        <img src="../img/Herramientas.jpg" alt="Encabezado Herramientas" class="encabezadop2h">
+        <img src="../img/Herramientas2.0.jpg" alt="Encabezado Herramientas" class="img-fluid d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block">
     </header><!---Encabezado-->
     <br><br>
-    <table border="1", align="center">
-        <tr>
-            <td >
-                <b><i>CÓDIGO</i></b>
-            </td>
-            <td >
-                <b><i>HERRAMIENTA</i></b>
-            </td>
-            <td >
-                <b><i>PRECIO ($)</i></b>
-            </td>
-        </tr>
-        <tr>
-            <td>
-               00001
-            </td>
-            <td>
-                Martillo 13 ONZAS
-            </td>
-            <td>
-                18.900
-            </td>
-     
-        </tr>
-        <tr>
-            <td>
-                00002
-             </td>
-            <td>
-                Taladro Percutor 3/8
-            </td>
-            <td>
-                449.000
-            </td>
-          
-        </tr>
-        <tr>
-            <td>
-                00003
-             </td>
-            <td>
-                Rotomartillo SDS 800W
-            </td>
-            <td>
-                279.000
-            </td>
-           
-        </tr>
-        <tr>
-            <td>
-                00004
-             </td>
-            <td>
-                Punta para matillo SDS
-            </td>
-            <td>
-                149.000
-            </td>
-           
-        </tr>
-        <tr>
-            <td>
-                00005
-             </td>
-            <td>
-                Alicate corte frio 7pulg
-            </td>
-            <td>
-                37.900
-            </td>
-           
-        </tr>
-        <tr>
-            <td>
-                00006
-             </td>
-            <td>
-                Hombre solo curvo 4pulg
-            </td>
-            <td>
-                34.900
-            </td>
-           
-        </tr>
-    </table>
-
-    <section>
-       
-        <br>
-            <div id="divtabla-herramientas">
-                <table><!---Dos imagenes y lista ordenada--->
-                    
-                    <td>
-                        <img src="../img/imgH1.jpg" alt="" height="300px">
-
-                    </td>
-                    <td colspan="3">
+    <div class="container">
+        <section>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="fw-bold">
                         <h2>TIPOS DE HERRAMIENTAS</h2>
-                        <ol class="ul-pagina2">
-                            <li class="li-pagina2">Herramientas de corte</li>
-                            <li class="li-pagina2">Herramientas para apretar piezas</li>
-                            <li class="li-pagina2">Herramientas electricas</li>
-                            <li class="li-pagina2">Herramientas para golpear</li>
-                            <li class="li-pagina2">Herramientas para medir</li>
-                            <li class="li-pagina2">Herramientas manuales</li>
+                        <ol class="">
+                            <li class="">Herramientas de corte</li>
+                            <li class="">Herramientas para apretar piezas</li>
+                            <li class="">Herramientas electricas</li>
+                            <li class="">Herramientas para golpear</li>
+                            <li class="">Herramientas para medir</li>
+                            <li class="">Herramientas manuales</li>
                         </ol>
-                    </td>
-                   
-                    <td>
-                        <img src="../img/imgH2.jpg" alt="" height="300px">
-
-                    </td>
-                    
-                </table>
-
-            </div>
-            <br>
-            <br>
-            <article>
-                <div class="Info-Herramientas">
-                    <h2>Implementos de trabajo</h2>
-                    <p>
-                     Una herramienta es un objeto elaborado que sirve como extensión del cuerpo de quien lo usa, para permitir o facilitar una tarea mecánica que sin ella no se podría realizar, o sería muy difícil, por falta de fuerza, movilidad, dimensiones etc.
-                    </p>
-                    <br>
-                    <p>
-                     Las herramientas se diseñan y fabrican para cumplir uno o más propósitos específicos, por lo que son artefactos con una función técnica.<br>
-                     Muchas herramientas, pero no todas, son combinaciones de máquinas simples que proporcionan una ventaja mecánica. Por ejemplo, una pinza es una doble palanca cuyo punto de apoyo está en la articulación central, la potencia es aplicada por la mano y la resistencia por la pieza que es sujetada. Un martillo, en cambio, sustituye un puño o una piedra por un material más duro, el acero, donde se aprovecha la energía cinética que se le imprime para aplicar grandes fuerzas.
-                    </p>
-                    <br>
-                    <p>
-                        La primera herramieta se creo en paleolitico(120.000 a.C.) Una de las mayores conquistas en estos primeros tiempos fue construir herramientas de piedra (para cortar, raspar, machacar, trabajar la madera, despiezar la caza...) que constituyen, en muchos casos, la única prueba de la existencia de estas poblaciones.
-                    </p>
+                    </div>
                 </div>
-             </article><!---informacion-->
-    </section>
-                 
-
-      
+                <div class="col-lg-2">
+                    <img src="../img/herramientas-2.0.jpg" class="img-fluid d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block"   >
+                </div>
+                <div class="col-lg-5">
+                    <h2>IMPLEMENTOS DE TRABAJO</h2>
+                        <div class="fw-bold">
+                            <p>Una herramienta es un objeto elaborado que sirve como extensión del cuerpo de quien lo usa, para permitir o facilitar una tarea mecánica que sin ella no se podría realizar, o sería muy difícil, por falta de fuerza, movilidad, dimensiones etc.</p>
+                            <br>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <table  class="table">
+            <tr>
+                <td><b><i>CÓDIGO</i></b></td>
+                <td><b><i>HERRAMIENTA</i></b></td>
+                <td><b><i>PRECIO ($)</i></b></td>
+            </tr>
+            <tr>
+                <td>00001</td>
+                <td>Martillo 13 ONZAS</td>
+                <td>18.900</td>
+            </tr>
+            <tr>
+                <td>00002</td>
+                <td>Taladro Percutor 3/8</td>
+                <td>449.000</td>
+            </tr>
+            <tr>
+                <td>00003</td>
+                <td>Rotomartillo SDS 800W</td>
+                <td>279.000</td>
+               
+            </tr>
+            <tr>
+                <td>00004</td>
+                <td>Punta para matillo SDS</td>
+                <td>149.000</td>
+            </tr>
+            <tr>
+                <td>00005</td>
+                <td>Alicate corte frio 7pulg</td>
+                <td>37.900</td>
+            </tr>
+            <tr>
+                <td>00006</td>
+                <td>Hombre solo curvo 4pulg</td>
+                <td>34.900</td>
+            </tr>
+        </table>
+    
         
-
-  
+    </div>
     <br>
     <br>
 
-    <footer class="pies-pagina">
-        <div>
-            <h2 class="h2-pies">Ferreteria El Guagua</h2>
-            <p class="p-pies">3016086845</p>
-            <p class="p-pies">Calle 10b#31232</p>
-            <p class="p-pies">elguagua@itsa.edu.co</p>
+    <footer >
+        <div class="  text-center text-light  bg-danger mw-100 p-1"  >
+            <h2 class="fw-bold">Ferreteria El Guagua</h2>
+            <p class="fw-bold">3016086845</p>
+            <p class="fw-bold">Calle 10b#31232</p>
+            <p class="fw-bold">elguagua@itsa.edu.co</p>
         </div>
     </footer><!---Piecera-->
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 </body>
 </html>

@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <script src="js/proceso.js"></script>
     <title>Página principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
+
 <body onload="cargarDatos()">
-    <nav>
-        <ul class="ul-menu">
-            <li class="li-menu"><a class="a" href="index.htm">Inicio</a></li>
-            <li class="li-menu"><a class="a" href="html/pherramientas.html">Herramientas</a></li>
-            <li class="li-menu"><a class="a" href="html/pcotizacion.html">Cotización</a></li>
-            <li class="li-menu"><a class="a" href="html/pnuestropersonal.html">El Personal</a></li>
-            <li class="li-menu"><a class="a" href="html/catalogo.html">Catalogo</a></li>
-            <li class="li-menu"><a class="a" href="html/chat.html">Chat en linea</a></li>
-            <li class="li-menu"><a class="a" href="html/factura.html">Factura</a></li>
-            <li class="li-menu"><a class="a" href="html/contactos.html">Contáctanos</a></li>
-            <li class="li-menu"><a class="a" href="html/login.html"onclick="cerrarSesion()" id="iniciar_se">Iniciar sesión</a></li>
-        </ul>
-    </nav>
-    <h4 id="nombre"></h4>
+    <nav class="navbar navbar-expand-lg bg-danger navbar-light">
+        <div class="container-fluid">
+             <a class="navbar-brand text-light fw-bold" href="index.htm">GUAGUA</a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                 <ul class="navbar-nav mx-auto"><!-- mx-auto -->
+                     <li class="nav-item "><a class="nav-link text-light fw-bold" href="index.htm">Inicio</a></li>
+                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="html/pherramientas.html">Herramientas</a></li>
+                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="html/pcotizacion.html">Cotización</a></li>
+                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="html/pnuestropersonal.html">El Personal</a></li>
+                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="html/catalogo.html">Catalogo</a></li>     
+                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="html/contactos.html">Contáctanos</a></li>
+                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="html/login.html" onclick="cerrarSesion()" id="iniciar_se">Iniciar sesión</a></li>
+                     <li class="nav-item"><a class="nav-link text-light fw-bold disabled navbar-text" href="#" id="nombre_usu"></a></li>
+                 </ul>
+             </div>
+        </div>
+     </nav>
     <header>
-        <img src="img/images.jpg" alt="Encabezado ferreteria" class="encabezadop2h">
+        <img src="img/images.jpg" alt="Encabezado ferreteria" class="img-fluid">
     </header><!---Encabezado-->
     <br>
+   <div class="container">
     <section>
         <article>
-           <div class="quienes-somos">
+           <div class="text-center">
                <h2>¿Quienes somos?</h2>
                <p>
                 Somos una ferreteria con más de 41 años de estar en el mercado ferretero, creado por la familia Guagua desde 1980. Gracias a la constancia y buena atención al cliente por parte de los propietarios de la ferreteria y su familia se pudo ganar un espacio en el mercado de ventas de productos de hogar, acabados y construcción. <br><br>
@@ -36,21 +44,24 @@
                </p>
            </div>
         </article><!---informacion-->
-        <div class="videopresentacion">
-            <video src="img/video.mp4"alt="video de presentacion" id="videop"controls></video>
+        <div class="embed-responsive embed-responsive-16by9 text-center">
+            <iframe class="embed-responsive-item" src="img/video.mp4"></iframe>
         </div>
         <div>
-            <marquee behavior="" direction=""><h2>FERRETERIA EL GUAGUA</h2></marquee>
+            <marquee class="d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block"><h2>FERRETERIA EL GUAGUA</h2></marquee>
         </div>
     </section>
-    <footer class="pies-pagina">
-        <div>
-            <h2 class="h2-pies">Ferreteria El Guagua</h2>
-            <p class="p-pies">3016086845</p>
-            <p class="p-pies">Calle 10b#31232</p>
-            <p class="p-pies">elguagua@itsa.edu.co</p>
+   </div>
+    
+    <footer >
+        <div class="  text-center text-light  bg-danger mw-100 p-1"  >
+            <h2 class="fw-bold">Ferreteria El Guagua</h2>
+            <p class="fw-bold">3016086845</p>
+            <p class="fw-bold">Calle 10b#31232</p>
+            <p class="fw-bold">elguagua@itsa.edu.co</p>
         </div>
     </footer><!---Piecera-->
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>

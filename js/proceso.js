@@ -52,19 +52,25 @@ function IniciarSesion() {
 
         }
     }
+
 }
 function cargarDatos() {
     
     var nom = localStorage.getItem("nombre_Ape")
     var sesion2 = localStorage.getItem("Inicio")
-    document.getElementById('nombre').innerHTML = "Bienvenido: " + nom;
-    document.getElementById('iniciar_se').innerHTML = sesion2;
+    if(sesion2 == null){
+        document.getElementById('iniciar_se').innerHTML = "Iniciar sesión";
+    }else{
+        document.getElementById('nombre_usu').innerHTML = nom;
+        document.getElementById('iniciar_se').innerHTML = sesion2;
+    }
+    
 }
 
 function cerrarSesion() {
     
     localStorage.removeItem("nombre_Ape")
-    localStorage.setItem("Inicio", "Iniciar sesion");
+    localStorage.setItem("Inicio", "Iniciar sesión");
 }
 
 
@@ -116,12 +122,14 @@ function guardarContacto(){
         localStorage.setItem('Encontraste',JSON.stringify(Vecencontraste))
         localStorage.setItem('Sugerencia',JSON.stringify(Vecsugerencia))
         alert("Registrado exitosamente")
-        cargar_datos_con();
+        //cargar_datos_con();
         limpiar_con();
         }
 }
+ 
 function cargar_datos_con(){ 
-    
+    cargarDatos()
+    var nombre = localStorage.getItem("Nombre");
         aux=
         `<tr>
        <th>Nombres</th>
@@ -141,7 +149,7 @@ function cargar_datos_con(){
       
        </tr>`
     
-       for( var i = 0;i<Vecnombre.length;i++){
+       //for( var i = 0;i<Vecnombre.length;i++){
         aux += `
         <tr>
         <th>${Vecnombre[i]}</th>
@@ -159,7 +167,7 @@ function cargar_datos_con(){
             <th>${Vecsugerencia[i]}</th>
         </tr> `
        document.getElementById('tabla-Contacto').innerHTML= aux
-}
+//}
 
 }
 function limpiar_con(){
