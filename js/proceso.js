@@ -128,7 +128,7 @@ function guardarContacto(){
 }
  
 function cargar_datos_con(){ 
-    cargarDatos()
+    //cargarDatos()
     var nombre = localStorage.getItem("Nombre");
         aux=
         `<tr>
@@ -149,7 +149,7 @@ function cargar_datos_con(){
       
        </tr>`
     
-       //for( var i = 0;i<Vecnombre.length;i++){
+       for( var i = 0;i<Vecnombre.length;i++){
         aux += `
         <tr>
         <th>${Vecnombre[i]}</th>
@@ -167,7 +167,7 @@ function cargar_datos_con(){
             <th>${Vecsugerencia[i]}</th>
         </tr> `
        document.getElementById('tabla-Contacto').innerHTML= aux
-//}
+}
 
 }
 function limpiar_con(){
