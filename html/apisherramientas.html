@@ -4,28 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Catalogo</title>
     <script src="../js/proceso.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <title>Iniciar sesión</title>
 </head>
 
-<body>
+<body onload="cargarDatos()">
     <nav class="navbar navbar-expand-lg bg-danger navbar-light ">
         <div class="container-fluid">
-             <a class="navbar-brand text-light fw-bold" href="../index.htm">GUAGUA</a>
+            <a class="navbar-brand text-light fw-bold" href="../index.htm">GUAGUA</a>
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
                  <span class="navbar-toggler-icon"></span>
              </button>
              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                 <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item "><a class="nav-link text-light fw-bold" href="../index.htm">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="pherramientas.html">Herramientas</a></li>
                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="pcotizacion.html">Cotización</a></li>
                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="pnuestropersonal.html">El Personal</a></li>
                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="catalogo.html">Catalogo</a></li>     
                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="contactos.html">Contáctanos</a></li>
-                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="apisherramientas.html">Información Api</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="apisherramientas.html">Información api</a></li>
                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="exportar.html">Exportar</a></li>
                     <li class="nav-item"><a class="nav-link text-light fw-bold" href="login.html" onclick="cerrarSesion()" id="iniciar_se">Iniciar sesión</a></li>
                     <li class="nav-item"><a class="nav-link text-light fw-bold disabled navbar-text" href="#" id="nombre_usu"></a></li>
@@ -33,38 +33,42 @@
              </div>
         </div>
      </nav>
+     <header>
+        <img src="../img/catalogo.png" alt="Encabezado ferreteria" class="img-fluid w-100 h-70">
+    </header><!---Encabezado-->
+    <br>
     <div class="container">
-        
-        <div class="row border mt-1">
-            <div class="text-center col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" >
-                <!-- <img src="../img/login.png" class="img-fluid  d-block d-xxl-block d-xl-block d-lg-block d-md-none d-sm-none"> -->
-                <img src="../img/usuarios.png" class="pt-5 img-fluid">
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" >
-               <div class="pt-5">
-                <form class="form" method = "post">
-                    <div class=""><h1 class="f2-bold text-center">INICIAR SESIÓN</h1></div>
-                    <div class="m-2">  <input type="text" class="form-control"  id="usuario_l" placeholder="Ingrese el usuario"></div>
-                    <div class="m-2"><input type="password"class="form-control" id="pass_l" placeholder="Ingrese la contraseña"></div>
-                    <input type="button" class="form-control w-40"  onclick="IniciarSesion()" id="ingresar"value="Iniciar sesión">
-                </form>
-               </div>
-            </div>
+       
+        <div class="container">
+            
+        <div>
+            <h1 class="text-center">Información sobre el dolor en Colombia</h1>
+            <input type="button" value="Buscar información de dolar" class="btn btn-primary" id="buscarColombia"> <br><br>
+            <P class="fw-bold" id="efectivo"></P>
+            <P class="fw-bold" id="transfe"></P>
+            <P class="fw-bold" id="compra"></P>
+            <P class="fw-bold" id="ventas"></P>
         </div>
+
+        
+        <div>
+            <h1 class="text-center">Información de Covid-19</h1>
+            <input type="button" value="Buscar información sobre el covid" class="btn btn-primary" id="buscarCovid"> <br><br>
+            <P class="fw-bold" id="casos"></P>
+            <P class="fw-bold" id="fallecidos"></P>
+        </div>
+        </div>
+        
     </div>
-    <br>
-    <br>
-    <footer class=" pt-5 mt-5" >
-        <div class=" text-center text-light  bg-danger mw-100  p-1"  >
+    <footer >
+        <div class="text-center text-light  bg-danger mw-100 p-1"  >
             <h2 class="fw-bold">Ferreteria El Guagua</h2>
             <p class="fw-bold">3016086845</p>
             <p class="fw-bold">Calle 10b#31232</p>
             <p class="fw-bold">elguagua@itsa.edu.co</p>
         </div>
     </footer><!---Piecera-->
-
-
-  
+    <script src="../js/api.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 

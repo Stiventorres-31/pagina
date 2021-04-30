@@ -55,7 +55,6 @@ function IniciarSesion() {
 
 }
 function cargarDatos() {
-    
     var nom = localStorage.getItem("nombre_Ape")
     var sesion2 = localStorage.getItem("Inicio")
     if(sesion2 == null){
@@ -68,14 +67,12 @@ function cargarDatos() {
 }
 
 function cerrarSesion() {
-    
     localStorage.removeItem("nombre_Ape")
     localStorage.setItem("Inicio", "Iniciar sesión");
 }
 
 
 function guardarContacto(){
-    
     var nombre = document.getElementById("txtNombre").value;
     var apellido = document.getElementById("txtApellido").value;
     var cedula=document.getElementById("txtCedula").value;
@@ -108,7 +105,7 @@ function guardarContacto(){
         Vecencontraste.push(encontraste);
         Vecsugerencia.push(sugerencia)
      
-        localStorage.setItem('Nombre',JSON.stringify(Vecnombre))
+        localStorage.setItem('Nombre',JSON.stringify(Vecnombre));
         localStorage.setItem('Apellidos',JSON.stringify(Vecapellido))
         localStorage.setItem('Cedulas',JSON.stringify(Veccedula))
         localStorage.setItem('Departamentos',JSON.stringify(Vecdepartamento))
@@ -122,54 +119,10 @@ function guardarContacto(){
         localStorage.setItem('Encontraste',JSON.stringify(Vecencontraste))
         localStorage.setItem('Sugerencia',JSON.stringify(Vecsugerencia))
         alert("Registrado exitosamente")
-        //cargar_datos_con();
         limpiar_con();
         }
 }
- 
-function cargar_datos_con(){ 
-    //cargarDatos()
-    var nombre = localStorage.getItem("Nombre");
-        aux=
-        `<tr>
-       <th>Nombres</th>
-       <th>Apellidos</th>
-       <th>Cedula</th>
-       <th>Departamento</th>
-       <th>Ciudad</th>
-       <th>Municipio</th>
-       <th>Direccion</th>
-       <th>Código postal</th>
-       <th>Telefono</th>
-       <th>Correo electronico</th>
-       <th>Situación</th>
-       <th>Encontraste</th>
-       <th>Sugerencia</th>
-       
-      
-       </tr>`
-    
-       for( var i = 0;i<Vecnombre.length;i++){
-        aux += `
-        <tr>
-        <th>${Vecnombre[i]}</th>
-            <th>${Vecapellido[i]}</th>
-            <th>${Veccedula[i]}</th>
-            <th>${Vecdepartamento[i]}</th>
-            <th>${Vecciudad[i]}</th>
-            <th>${Vecmunicipio[i]}</th>
-            <th>${Vecdireccion[i]}</th>
-            <th>${VeccodigoPostal[i]}</th>
-            <th>${Vectelefono[i]}</th>
-            <th>${Veccorreo[i]}</th>
-            <th>${Vecsituacion[i]}</th>
-            <th>${Vecencontraste[i]}</th>
-            <th>${Vecsugerencia[i]}</th>
-        </tr> `
-       document.getElementById('tabla-Contacto').innerHTML= aux
-}
 
-}
 function limpiar_con(){
     document.getElementById("txtNombre").value="";
     document.getElementById("txtApellido").value="";
